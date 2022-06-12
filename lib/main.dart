@@ -13,10 +13,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Movie Application',
-      theme: ThemeData.dark(),
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Colors.blue
+        
+      ),
+     
        
-       
-      home:  HomePage()
+      
+      home: HomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
