@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(
+                         SizedBox(
                           height: 8.0,
                         ),
                         Text(
