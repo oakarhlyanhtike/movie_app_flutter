@@ -1,58 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import '../componets/home_header.dart';
+import '../componets/home_search_bar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
             child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              padding: const EdgeInsets.all(15),
-              child: Container(
-                height: MediaQuery.of(context).size.height / 10,
-                width: MediaQuery.of(context).size.width,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                         SizedBox(
-                          height: 8.0,
-                        ),
-                        Text(
-                          'HELLO,',
-                          style: const TextStyle(
-                              fontSize: 22, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
-                        Text(
-                          'Oakar Hlyan Htike',
-                          style: TextStyle(
-                              fontSize: 19,
-                              color: Colors.blue,
-                              fontWeight: FontWeight.w800),
-                        ),
-                      ],
-                    ),
-                    Container(
-                      child: CircleAvatar(
-                        radius: MediaQuery.of(context).size.height / 24,
-                        backgroundImage: AssetImage('assets/profile.jpeg'),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            )
+            //header
+            HomeHeader(size: size),
+            //search
+            home_search_bar(size: size)
           ],
         )),
       ),

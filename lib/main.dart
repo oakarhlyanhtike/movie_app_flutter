@@ -13,13 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Movie Application',
-      theme: ThemeData.dark().copyWith(
-        primaryColor: Colors.blue
-        
-      ),
-     
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.blue,
+        scaffoldBackgroundColor: Color.fromARGB(255, 2, 18, 31)
        
-      
+
+      ),
       home: HomePage(),
       debugShowCheckedModeBanner: false,
     );
