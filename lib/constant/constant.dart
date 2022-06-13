@@ -6,5 +6,11 @@ const headerTextStyle = TextStyle(
   color: Color.fromARGB(255, 31, 73, 188),
   letterSpacing: 2,
   fontFamily: 'FjallaOne',
-  
 );
+const List<String> genre = [
+  'All',
+  'Action',
+  'Romance',
+  'Honor',
+  'Drama',
+];
