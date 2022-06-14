@@ -33,15 +33,22 @@ class _CatagoryBarState extends State<CatagoryBar> {
                 });
               },
               child: Container(
-                margin: const EdgeInsets.only(left: 16),
+                margin: const EdgeInsets.only(left: 14 ),
                 alignment: Alignment.center,
                 width: widget.size.width / 4,
-                decoration: selectedIndex ==  index? BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    gradient: LinearGradient(colors: [
-                      Color.fromARGB(255, 37, 136, 218),
-                      Color.fromARGB(255, 145, 173, 187)
-                    ])): BoxDecoration(color: Colors.transparent),
+                decoration: selectedIndex == index
+                    ? BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Color.fromARGB(255, 37, 136, 218),
+                              Color.fromARGB(255, 145, 173, 187)
+                            ]))
+                    : BoxDecoration(
+                        color: Colors.transparent,
+                      ),
                 child: Text(genre[index].toUpperCase(),
                     style: GoogleFonts.ubuntu(
                         fontSize: 14, fontWeight: FontWeight.w500)),

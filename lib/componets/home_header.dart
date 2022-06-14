@@ -11,8 +11,8 @@ class HomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 8),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
       child: SizedBox(
         height: size.height / 10,
         width: size.width,
